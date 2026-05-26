@@ -1,9 +1,13 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
+
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
 html {
   font-size: 16px;
-}
-* {
-  box-sizing: border-box;
 }
 .page {
   margin: 0 auto;
@@ -15,13 +19,12 @@ html {
 .header{
   display: grid;
   width:100%;
-  max-width:64rem;
   height: 48rem;
   grid-template-columns: 1fr 1fr;
   background-image: var(--background-image);
-  background-attachment: fixed;
-  object-fit: fill;
+  background-size: cover;
 }
+
 .decorated-zone{
   position: relative;
   border-color: var(--rect__color);
@@ -48,6 +51,7 @@ html {
   border-bottom: 1px solid var(--rect__color);
   border-left: 1px solid var(--rect__color);
 }
+
 
 .header__rec {
   position: absolute;
@@ -79,7 +83,8 @@ html {
 }
 
 .header__theme-menu-list{
-  grid-area: 1 /3;
+  grid-column: 2 / 3;
+  grid-row: 1;
   display: flex;
   flex-direction: row;
   gap: 10px;
@@ -101,9 +106,17 @@ html {
 .header__theme-menu-button_active{
   outline: 1px solid var(--active-button);
 }
+.header__theme-menu-button_active:hover {
+  border: 1px solid rgba(255, 0, 112, 0.4);
+}
+.header__theme-menu-button_active:focus {
+  outline: none;
+  text-decoration: underline;
+}
+
 .header__main-title{
 width: 100%;
-margin-inline-end: calc(50% - 130px/2);
+margin-inline-end: 0;
 font-family: 'IBM Plex Mono', normal;
 font-weight: 700;
 font-size: 9rem;
@@ -123,13 +136,15 @@ color: var(--header_text-color);
 background-color: var(--accent-color);
 max-width: 491px;
 width: 100%;
-height: 71px;
+min-height: 71px;
+height: auto;
 margin-left: auto;
 margin-right: 20px;
-text-wrap: wrap;
+white-space: normal;
 }
 .content{
   margin-block-start: 60px;
+  padding: 0 10px;
 
 }
 .content__section1 {
@@ -147,12 +162,10 @@ text-wrap: wrap;
   font-size: 18px;
   line-height: 23px;
   color: var(--question__color);
+  padding-right: 20px;
 }
 .section1__blocks{
   grid-column: 2;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
 }
 .section__title{
   font-family: 'IBM Plex Mono', normal;
@@ -160,6 +173,8 @@ text-wrap: wrap;
   font-size: 18px;
   line-height: 23px;
   color: #000028;
+  margin-bottom: 10px;
+  
 }
 .title-decor{
   background-color: var(--accent-color);
@@ -254,9 +269,32 @@ color: #000028;
   height: 100%;
   object-fit: cover;
 }
+
+.decor__link {
+font-family: 'IBM Plex Mono', normal;
+font-weight: 400;
+font-size: 18px;
+line-height: 23px;
+color: var(--section__text);
+text-shadow: 1px 1px 0 var(--accent-color);
+text-decoration: none;
+}
+
+.decor__link:hover {
+  text-decoration: underline;
+}
+
+.decor__link:focus {
+  border: none;
+}
+.decor__link:focus-visible {
+  border: 1px solid #F1B2CE;
+}
+
 .footer{
   width: 100%;
-  height: 768px;
+  min-height: 100vh;
+  height: auto;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -271,15 +309,14 @@ text-shadow: 2px 2px 0px var(--accent-color);
 }
 
 @media (max-width: 1023px) {
-  .header {
-    width: 100%;
-    height: 64rem;
+  html, body, .page {
+    max-width: 100%;
+    overflow-x: hidden;
   }
-  .header__main-title {
-    font-size: 120px;
+  .page {
+    max-width: 100%;  
+    margin: 0 auto;       
   }
-}
-@media (max-width: 767px) {
   .header {
     width: 100%;
     height: 100vh;
@@ -291,24 +328,164 @@ text-shadow: 2px 2px 0px var(--accent-color);
     grid-column: 1;
   }
   .header__main-title {
-    font-size: 116px;
+    position: relative;  
+    width: 100%;
+    margin: 0;
+    font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem) ;
+    text-align: left;
+    padding: 0 10px;
   }
   .header__theme-menu-list {
     display: flex;
     align-items: end;
     flex-direction: column;
-    margin-top :39px;
+    margin-top :192px;
     margin-right: 10px;
     padding: 0 9px;
   }
-    .header__theme-menu-button {
+  .header__text {
+    margin: 162px 20px 183px 384px;
+    height: 117px;
+    width: 355px;
+  }
+  
+  .header__theme-menu-button {
       font-size: 18px;
     }
-  
-  .header__text {
-    font-size: 18px;
-    margin: 55px 10px 65px 10px;
-    max-width: 355px;
-    height: 117px;
+
+  .header__rec {
+    margin: 10px 19px 632px 304px;
   }
+  .content__section2 {
+    grid-template-columns: 1fr;
+  }
+  .section2__blocks {
+    gap: 0;
+  }
+  .content__section2 .section__question {
+    width: 236px;
+    grid-row: 1;
+  }
+  .content__section2 .section2__blocks {
+    grid-column: 1;
+  }
+
+
+}
+@media (max-width: 767px) {
+  html, body, .page {
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+  .page {
+    max-width: 100%;  
+    margin: 0 auto;       
+  }
+  .header {
+    width: 100%;
+    height: 100vh;
+    grid-template-columns: 1fr;
+  }
+  .header__theme-menu,
+  .header__title,
+  .header .header__text {
+    grid-column: 1;
+  }
+  .header__main-title {
+    position: relative;  
+    width: 100%;
+    margin: 0;
+    font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+    text-align: left;
+    padding: 0 10px;
+  }
+  .header__theme-menu-list {
+    display: flex;
+    align-items: end;
+    flex-direction: column;
+    margin-top :75px;
+    margin-right: 10px;
+    padding: 0 9px;
+  }
+  .header__text {
+    margin: 55px 10px 66px 10px;
+    height: 117px;
+    width: 355px;
+  }
+  
+  .header__theme-menu-button {
+      font-size: 18px;
+    }
+
+  .header__rec {
+    margin: 10px 19px 632px 304px;
+  }
+  .content__section1 {
+    grid-template-columns: 1fr;
+    padding: 0 10px;
+  }
+  .content__section1 .section__question {
+    margin-bottom: 20px;
+    grid-column: 1;
+  }
+  .content__section1 .section1__blocks{
+    grid-column: 1;
+  }
+  .content{
+    margin-block-start: 40px;
+  
+  }
+  .content__section2 {
+    grid-template-columns: 1fr;
+    padding: 0 10px;
+  }
+  .content__section2 .section2__blocks {
+    grid-column: 1;
+  }
+  .content__section3 {
+    grid-template-columns: 1fr;
+    padding: 0 10px;
+  }
+  .content__section4 {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    gap: 10px;
+  }
+  .content__section4 {
+    padding: 0 10px;
+  }
+  .content__section4 .section__question {
+    grid-column: 1;
+  }
+  .sunset__photo{
+    grid-column: 1;
+    grid-row: 2;
+  }
+  .icecream__photo{
+    grid-column:1;
+    grid-row: 3;
+  }
+  .tape__photo{
+    grid-column: 1;
+    grid-row: 4;
+  }
+  .books__photo{
+    grid-column: 1;
+    grid-row: 5;
+  }
+  .street__photo{
+    grid-column: 1;
+    grid-row: 6;
+  }
+  content .footer{
+    width: 100%;
+    min-height: 100vh;
+    padding: 0;
+  }
+  
+  .footer__title{
+    font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+    padding-right: 10px;
+  }
+
 }
