@@ -1,7 +1,4 @@
-/*
-  Переменные для вашего проекта
-  и их переопределение под различные устройства
-*/
+
 :root {
   --background-image: url(../images/cover-image-dark.png);
   --bg-color: #000028;

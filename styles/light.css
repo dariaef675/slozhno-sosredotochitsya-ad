@@ -1,8 +1,4 @@
-/*
-  Специально для светлой темы при наличии класса.
-  Здесь окажутся стили, которые нужно переопределить принудительно,
-  переключая тему
-*/
+
 
 :root.theme-light {
   --background-image: url(../images/cover-image-light.png);
@@ -15,14 +11,21 @@
   --section__text: #353430;
   --menu-text: #353430;
   --active-button: #353430;
-  /* сохраните этот селектор в приведённом виде.
-    Так стили написанные ниже будут иметь больший вес,
-    чем стили в медиазапросе предпочтений пользователя
-  */
 }
 
-.theme-light .page {
-  /* Вам также нужно будет написать ряд подобных селекторов */
+@media (prefers-color-scheme: light) {
+  :root {
+    --background-image: url(../images/cover-image-light.png);
+    --bg-color: #fff1f7;
+    --main-title-color: #ffc2e6;
+    --header_text-color: #353430;
+    --accent-color: #ff8dcb;
+    --rect__color: #353430;
+    --question__color: #353430;
+    --section__text: #353430;
+    --menu-text: #353430;
+    --active-button: #353430;
+  }
 }
 
 .theme-light .header__rec {
