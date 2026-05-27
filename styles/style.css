@@ -495,14 +495,19 @@ main {
 
   .content__section1 {
     grid-template-columns: 1fr;
+    padding-bottom: 4px;
   }
 
   .content__section1 .section1__blocks {
     grid-column: 1;
+    padding-bottom: 4px;
   }
 
   .content__section2 {
     grid-template-columns: 1fr;
+  }
+  .section2__blocks {
+    gap: 3px;
   }
 
   .content__section3 {
@@ -512,7 +517,7 @@ main {
   .content__section4 {
     grid-template-columns: 1fr;
     grid-template-rows: none;
-    grid-template-areas: none;   /* сброс */
+    grid-template-areas: none;  
     gap: 10px;
   }
   .sunset__photo,
@@ -520,7 +525,7 @@ main {
   .tape__photo,
   .books__photo,
   .street__photo {
-    grid-area: auto;             /* сброс grid-area */
+    grid-area: auto;          
     height: auto;
   }
 
