@@ -290,7 +290,6 @@ main {
   .header__main-title {
     font-size: 157px;
     margin-inline-start: -20px;
-    margin-top: 273px;
   }
 
   .header__text {
@@ -385,6 +384,11 @@ main {
   .content__section2 {
     grid-template-columns: 1fr;
   }
+  .content__section2 .section__question {
+    width: 236px;
+    height: 70px;
+    padding-bottom: 20px;
+  }
 
   .content__section4 {
     grid-template-rows: auto clamp(192px, -12px + 26.56vw, 260px) clamp(
@@ -398,6 +402,7 @@ main {
       "tape      books     ice-cream"
       "tape      street    street";
     grid-auto-flow: dense;
+    padding-top: 20px;
   }
 
   .content__section4 .section__question {
@@ -472,7 +477,7 @@ main {
   }
 
   main {
-    margin: 40px 0;
+    margin: 50px 0;
   }
 
   .content__section1,
