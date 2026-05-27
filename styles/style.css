@@ -148,10 +148,6 @@ main {
   margin-bottom: 80px;
 }
 
-.content__section4 {
-  margin-bottom: 0;
-}
-
 .section__question {
   font-family: "IBM Plex Mono", sans-serif;
   font-weight: 700;
@@ -221,10 +217,12 @@ main {
   flex-direction: column;
   gap: 20px;
 }
+
 .content__section4 {
   display: grid;
   gap: 20px;
   grid-template-columns: repeat(3, 1fr);
+  margin-bottom: 0;
 }
 
 .content__section4 .section__question {
@@ -292,6 +290,7 @@ main {
   .header__main-title {
     font-size: 157px;
     margin-inline-start: -20px;
+    margin-top: 273px;
   }
 
   .header__text {
@@ -488,6 +487,7 @@ main {
 
   .content__section1 .section1__blocks {
     grid-column: 1;
+    height: 431px;
   }
 
   .content__section2 {
