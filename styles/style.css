@@ -534,19 +534,23 @@ main {
     padding-bottom: 7px;
   }
   .section2__blocks {
-    gap: 3px;
+    gap: 4px;
   }
   .content__section3 {
     grid-template-columns: 1fr;
     gap: 5px;
     padding-bottom: 5px;
+    max-height: 1736px;
 
   }
   .section3__blocks {
-    padding-bottom: 4px;
+    padding-bottom: 2px;
+  }
+  .section3__blocks .section__text{
+    padding-bottom: 3px;
   }
   .content__section3 .section__question {
-    padding-bottom: 16px;
+    padding-bottom: 13px;
   }
 
   .content__section4 {
