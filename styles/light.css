@@ -24,6 +24,10 @@
     --menu-text: #353430;
     --active-button: #353430;
   }
+
+  :root:not(.theme-dark) .header__rec {
+    display: none;
+  }
 }
 
 .theme-light .header__rec {

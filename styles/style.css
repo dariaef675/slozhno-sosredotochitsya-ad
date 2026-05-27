@@ -104,6 +104,7 @@ html {
 
 .header__theme-menu-button_active:hover {
   border: 1px solid rgba(255, 0, 112, 0.4);
+
 }
 
 .header__theme-menu-button_active:focus {
@@ -178,7 +179,7 @@ main {
 }
 
 .section__text {
-  font-family: "IBM Plex Mono", sans-serif;
+  font-family: "IBM Plex Mono", normal;
   font-weight: 400;
   font-size: 18px;
   line-height: 23px;
@@ -465,7 +466,7 @@ main {
 
 @media (max-width: 767px) {
   .decorated-zone::before {
-    top: 10px;
+    top: 12px;
     right: 10px;
   }
 
@@ -489,11 +490,11 @@ main {
   }
 
   .header__main-title {
-    font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+    font-size: clamp(7.30rem, 7.0115rem + 1.0178vw, 7.5rem);
   }
 
   .header__text {
-    width: clamp(355px, 346.41px + 2.29vw, 364px);
+    width: clamp(360px, 346.41px + 2.29vw, 360px);
   }
 
   .content {
@@ -513,12 +514,15 @@ main {
 
   .content__section1 {
     grid-template-columns: 1fr;
-    padding-bottom: 6px;
   }
 
   .content__section1 .section1__blocks {
     grid-column: 1;
     padding-bottom: 4px;
+    height: 431px;
+  }
+  .section1__blocks .section__text {
+    height: 351px;
   }
 
   .content__section2 {
@@ -526,7 +530,7 @@ main {
     padding-bottom: 7px;
   }
   .section2__blocks {
-    gap: 2px;
+    gap: 3px;
   }
   .content__section3 {
     grid-template-columns: 1fr;
@@ -546,6 +550,10 @@ main {
     grid-template-rows: none;
     grid-template-areas: none;
     gap: 8px;
+  }
+
+  .content__section4 .section__question {
+    margin: 0;
   }
   .sunset__photo,
   .icecream__photo,
