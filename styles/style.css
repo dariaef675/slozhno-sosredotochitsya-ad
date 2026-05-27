@@ -95,11 +95,14 @@ html {
   color: var(--menu-text);
   text-transform: lowercase;
   border: none;
-  background-color: transparent;
+  background-color: transparent; 
+  padding: 0 13px;
 }
 
 .header__theme-menu-button_active {
   outline: 1px solid var(--active-button);
+  width: 70px;
+  height: 26px;
 }
 
 .header__theme-menu-button_active:hover {
@@ -487,6 +490,7 @@ main {
 
   .header__theme-menu-list {
     margin-top: clamp(75px, -36.64px + 29.77vw, 192px);
+    padding: 0 10px;
   }
 
   .header__main-title {
@@ -542,7 +546,7 @@ main {
     padding-bottom: 4px;
   }
   .content__section3 .section__question {
-    padding-bottom: 19px;
+    padding-bottom: 16px;
   }
 
   .content__section4 {
