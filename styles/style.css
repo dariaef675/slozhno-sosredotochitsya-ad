@@ -83,7 +83,8 @@ html {
   justify-self: end;
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 13px;
+  padding: 0 13px;
 }
 
 .header__theme-menu-button {
@@ -234,6 +235,7 @@ main {
 
 .content__section4 .section__question {
   grid-column: 1 / -1;
+  padding-bottom: 3px;
 }
 
 .sunset__photo,
