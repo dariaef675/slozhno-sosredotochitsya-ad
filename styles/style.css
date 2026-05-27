@@ -278,6 +278,9 @@ main {
 
 @media (min-width: 1024px) {
   .header {
+    display: grid;
+    grid-template-rows: 1fr min-content 1fr;
+    height: 100vh;
     padding: 0 20px;
   }
 
@@ -356,20 +359,24 @@ main {
 @media (min-width: 768px) and (max-width: 1023px) {
   .header {
     padding: 0 20px;
-    grid-template-rows: 0.28fr 0.42fr 0.3fr;
+    grid-template-rows: 1fr min-content 1fr;
   }
 
   .header__theme-menu-list {
-    margin-top: clamp(75px, 543px - 45.7vw, 192px);
+    margin-top: 20px;
+    align-self: start;
   }
 
   .header__main-title {
     font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
     margin-inline-start: -20px;
+    align-self: center;
   }
 
   .header__text {
     width: clamp(364px, -17px + 49.61vw, 491px);
+    align-self: center;
+    justify-self: end;
   }
 
   .content__section1,
@@ -477,7 +484,7 @@ main {
   }
 
   main {
-    margin: 50px 0;
+    margin: 43px 0;
   }
 
   .content__section1,
@@ -492,7 +499,6 @@ main {
 
   .content__section1 .section1__blocks {
     grid-column: 1;
-    height: 431px;
   }
 
   .content__section2 {
@@ -505,7 +511,17 @@ main {
 
   .content__section4 {
     grid-template-columns: 1fr;
+    grid-template-rows: none;
+    grid-template-areas: none;   /* сброс */
     gap: 10px;
+  }
+  .sunset__photo,
+  .icecream__photo,
+  .tape__photo,
+  .books__photo,
+  .street__photo {
+    grid-area: auto;             /* сброс grid-area */
+    height: auto;
   }
 
   .footer__title {
