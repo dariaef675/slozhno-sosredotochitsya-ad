@@ -520,15 +520,20 @@ main {
 
   .content__section2 {
     grid-template-columns: 1fr;
+    padding-bottom: 3px;
   }
   .section2__blocks {
     gap: 2px;
   }
   .content__section3 {
     grid-template-columns: 1fr;
+    gap: 5px;
   }
   .section3__blocks {
     gap: 3px;
+  }
+  .content__section3 .section__question{
+    padding-bottom: 12px;
   }
 
   .content__section4 {
