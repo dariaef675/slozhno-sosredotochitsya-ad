@@ -360,11 +360,13 @@ main {
   .header {
     padding: 0 20px;
     grid-template-rows: 1fr min-content 1fr;
+    padding-bottom: 60px;
   }
 
   .header__theme-menu-list {
-    margin-top: 20px;
+    margin-top: 146px;
     align-self: start;
+    
   }
 
   .header__main-title {
@@ -394,7 +396,10 @@ main {
   .content__section2 .section__question {
     width: 236px;
     height: 70px;
-    padding-bottom: 20px;
+    padding-bottom: 23px;
+  }
+  .section2__blocks {
+    gap: 4px;
   }
 
   .content__section4 {
@@ -443,6 +448,9 @@ main {
 
   .footer__title {
     font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+  }
+  .footer {
+    padding-top: 60px;
   }
 }
 
