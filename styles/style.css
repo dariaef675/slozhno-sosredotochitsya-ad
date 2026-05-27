@@ -119,7 +119,6 @@ html {
   color: var(--main-title-color);
   text-shadow: 4px 4px 0 var(--accent-color);
   align-self: center;
-
 }
 
 .header__text {
@@ -159,6 +158,14 @@ main {
 .section__title {
   font-family: "IBM Plex Mono", sans-serif;
   font-weight: 700;
+  font-size: 18px;
+  line-height: 23px;
+  color: #000028;
+  margin-bottom: 10px;
+}
+.block_advice .section__title {
+  font-family: "IBM Plex Mono", sans-serif;
+  font-weight: 400;
   font-size: 18px;
   line-height: 23px;
   color: #000028;
@@ -300,7 +307,6 @@ main {
     width: 491px;
   }
 
-
   .content__section1,
   .content__section3 {
     grid-template-columns: 315px 1fr;
@@ -366,7 +372,6 @@ main {
   .header__theme-menu-list {
     margin-top: 146px;
     align-self: start;
-    
   }
 
   .header__main-title {
@@ -403,11 +408,13 @@ main {
   }
 
   .content__section4 {
-    grid-template-rows: auto clamp(192px, -12px + 26.56vw, 260px) clamp(
+    grid-template-rows:
+      auto clamp(192px, -12px + 26.56vw, 260px) clamp(
         230px,
         -25px + 33.2vw,
         315px
-      ) clamp(318px, -27px + 44.92vw, 433px);
+      )
+      clamp(318px, -27px + 44.92vw, 433px);
     grid-template-areas:
       "gallery   gallery   gallery"
       "sunset    sunset    ice-cream"
@@ -503,7 +510,7 @@ main {
 
   .content__section1 {
     grid-template-columns: 1fr;
-    padding-bottom: 4px;
+    padding-bottom: 6px;
   }
 
   .content__section1 .section1__blocks {
@@ -515,17 +522,19 @@ main {
     grid-template-columns: 1fr;
   }
   .section2__blocks {
-    gap: 3px;
+    gap: 2px;
   }
-
   .content__section3 {
     grid-template-columns: 1fr;
+  }
+  .section3__blocks {
+    gap: 3px;
   }
 
   .content__section4 {
     grid-template-columns: 1fr;
     grid-template-rows: none;
-    grid-template-areas: none;  
+    grid-template-areas: none;
     gap: 10px;
   }
   .sunset__photo,
@@ -533,7 +542,7 @@ main {
   .tape__photo,
   .books__photo,
   .street__photo {
-    grid-area: auto;          
+    grid-area: auto;
     height: auto;
   }
 
