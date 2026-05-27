@@ -499,7 +499,7 @@ main {
   }
 
   main {
-    margin: 43px 0;
+    margin: 40px 0;
   }
 
   .content__section1,
@@ -528,7 +528,7 @@ main {
   .content__section3 {
     grid-template-columns: 1fr;
     gap: 5px;
-    padding-bottom: 9px;
+    padding-bottom: 5px;
 
   }
   .section3__blocks {
@@ -542,7 +542,7 @@ main {
     grid-template-columns: 1fr;
     grid-template-rows: none;
     grid-template-areas: none;
-    gap: 10px;
+    gap: 8px;
   }
   .sunset__photo,
   .icecream__photo,
