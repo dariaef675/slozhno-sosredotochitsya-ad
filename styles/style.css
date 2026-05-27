@@ -95,7 +95,7 @@ html {
   color: var(--menu-text);
   text-transform: lowercase;
   border: none;
-  background-color: transparent; 
+  background-color: transparent;
   padding: 0 13px;
 }
 
@@ -107,7 +107,6 @@ html {
 
 .header__theme-menu-button_active:hover {
   border: 1px solid rgba(255, 0, 112, 0.4);
-
 }
 
 .header__theme-menu-button_active:focus {
@@ -494,7 +493,7 @@ main {
   }
 
   .header__main-title {
-    font-size: clamp(7.30rem, 7.0115rem + 1.0178vw, 7.5rem);
+    font-size: clamp(7.3rem, 7.0115rem + 1.0178vw, 7.5rem);
   }
 
   .header__text {
@@ -541,12 +540,11 @@ main {
     gap: 5px;
     padding-bottom: 5px;
     max-height: 1736px;
-
   }
   .section3__blocks {
     padding-bottom: 2px;
   }
-  .section3__blocks .section__text{
+  .section3__blocks .section__text {
     padding-bottom: 3px;
   }
   .content__section3 .section__question {
