@@ -1,5 +1,6 @@
-
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
@@ -11,6 +12,8 @@ html {
 .page {
   margin: 0 auto;
   background-color: var(--bg-color);
+  background-image: var(--background-image);
+  background-position: center bottom;
   background-attachment: fixed;
 }
 
@@ -51,9 +54,6 @@ html {
 .header {
   display: grid;
   height: 100vh;
-  background-image: var(--background-image);
-  background-position: center bottom;
-  background-size: cover;
 }
 
 .header__rec {
@@ -202,7 +202,11 @@ html {
   line-height: 23px;
   color: #000028;
 }
-
+.block_advice {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
 .content__section4 {
   display: grid;
   gap: 20px;
@@ -280,9 +284,16 @@ html {
     width: 491px;
   }
 
+
   .content__section1,
   .content__section3 {
     grid-template-columns: 315px 1fr;
+  }
+  .content__section2 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .section2__blocks:nth-child(2) {
+    grid-column: 1 / 2;
   }
 
   .content__section4 {
@@ -297,14 +308,24 @@ html {
 
   .content__section4 .section__question {
     grid-area: gallery;
-    grid-column: unset;
+    grid-column: 1 / 4;
   }
 
-  .sunset__photo   { grid-area: sunset; }
-  .icecream__photo { grid-area: ice-cream; }
-  .tape__photo     { grid-area: tape; }
-  .books__photo    { grid-area: books; }
-  .street__photo   { grid-area: street; }
+  .sunset__photo {
+    grid-area: sunset;
+  }
+  .icecream__photo {
+    grid-area: ice-cream;
+  }
+  .tape__photo {
+    grid-area: tape;
+  }
+  .books__photo {
+    grid-area: books;
+  }
+  .street__photo {
+    grid-area: street;
+  }
 
   .sunset__photo,
   .icecream__photo,
@@ -326,7 +347,7 @@ html {
   }
 
   .header__theme-menu-list {
-    margin-top: clamp(75px, 543px - 45.70vw, 192px);
+    margin-top: clamp(75px, 543px - 45.7vw, 192px);
   }
 
   .header__main-title {
@@ -352,7 +373,11 @@ html {
   }
 
   .content__section4 {
-    grid-template-rows: auto clamp(192px, -12px + 26.56vw, 260px) clamp(230px, -25px + 33.20vw, 315px) clamp(318px, -27px + 44.92vw, 433px);
+    grid-template-rows: auto clamp(192px, -12px + 26.56vw, 260px) clamp(
+        230px,
+        -25px + 33.2vw,
+        315px
+      ) clamp(318px, -27px + 44.92vw, 433px);
     grid-template-areas:
       "gallery   gallery   gallery"
       "sunset    sunset    ice-cream"
@@ -363,14 +388,24 @@ html {
 
   .content__section4 .section__question {
     grid-area: gallery;
-    grid-column: unset;
+    grid-column: 1 / 4;
   }
 
-  .sunset__photo   { grid-area: sunset; }
-  .icecream__photo { grid-area: ice-cream; }
-  .tape__photo     { grid-area: tape; }
-  .books__photo    { grid-area: books; }
-  .street__photo   { grid-area: street; }
+  .sunset__photo {
+    grid-area: sunset;
+  }
+  .icecream__photo {
+    grid-area: ice-cream;
+  }
+  .tape__photo {
+    grid-area: tape;
+  }
+  .books__photo {
+    grid-area: books;
+  }
+  .street__photo {
+    grid-area: street;
+  }
 
   .sunset__photo,
   .icecream__photo,
