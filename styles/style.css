@@ -532,7 +532,7 @@ main {
 
   }
   .section3__blocks {
-    gap: 3px;
+    padding-bottom: 4px;
   }
   .content__section3 .section__question {
     padding-bottom: 19px;
